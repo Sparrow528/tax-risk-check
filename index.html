@@ -6,10 +6,11 @@
 <title>企业税务风险健康体检（快速版）— 宇守信咨询</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; background:#f0f2f5; color:#2d3436; padding-bottom:60px; }
+body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; background:linear-gradient(180deg,#fffbeb 0%,#fef3c7 60%,#fef9e7 100%); color:#2d3436; padding-bottom:100px; }
 .header { background:linear-gradient(135deg,#92400e,#d97706); color:white; padding:32px 20px 24px; text-align:center; }
 .header h1 { font-size:22px; font-weight:700; margin-bottom:6px; }
 .header p { font-size:13px; opacity:0.85; }
+.header .v3-badge { display:inline-block; background:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.4); border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; margin-left:6px; vertical-align:middle; letter-spacing:1px; }
 .header .badge { display:inline-block; background:rgba(255,255,255,0.2); border-radius:20px; padding:4px 14px; font-size:11px; margin-top:8px; }
 .tabs { display:flex; background:white; box-shadow:0 1px 4px rgba(0,0,0,0.08); position:sticky; top:0; z-index:10; }
 .tab { flex:1; text-align:center; padding:14px 0; font-size:14px; font-weight:500; color:#888; cursor:pointer; border-bottom:3px solid transparent; transition:all .2s; }
@@ -17,15 +18,15 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 .panel { display:none; padding:16px; }
 .panel.active { display:block; }
 .card { background:white; border-radius:12px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.06); margin-bottom:12px; }
-.card-title { background:#f0f4ff; padding:10px 16px; font-size:13px; font-weight:600; color:#b45309; border-bottom:1px solid #e0e7ff; }
+.card-title { background:#fef3c7; padding:10px 16px; font-size:13px; font-weight:600; color:#b45309; border-bottom:1px solid #fde68a; }
 .form-row { padding:10px 16px; border-bottom:1px solid #f5f5f5; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .form-row label { font-size:13px; color:#444; min-width:150px; flex-shrink:0; }
 .form-row input,.form-row select { padding:8px 12px; border:1px solid #e0e0e0; border-radius:8px; font-size:13px; flex:1; min-width:80px; max-width:200px; background:#fff8e1; line-height:44px; height:44px; }
-.form-row input:focus,.form-row select:focus { outline:none; border-color:#3b82f6; }
+.form-row input:focus,.form-row select:focus { outline:none; border-color:#d97706; }
 .form-row .unit { font-size:12px; color:#888; }
 .yesno { display:flex; gap:8px; }
 .yesno span { padding:4px 16px; border-radius:16px; font-size:13px; cursor:pointer; border:1px solid #ddd; color:#666; }
-.yesno span.sel-yes { background:linear-gradient(135deg,#92400e,#d97706); color:white; border-color:#3b82f6; }
+.yesno span.sel-yes { background:linear-gradient(135deg,#92400e,#d97706); color:white; border-color:#d97706; }
 .yesno span.sel-no { background:#e8ecf1; color:#999; border-color:#ddd; }
 .fixed-bottom { position:sticky; bottom:0; background:white; padding:12px 16px; display:flex; gap:10px; box-shadow:0 -2px 8px rgba(0,0,0,0.06); z-index:10; }
 .fixed-bottom button { flex:1; padding:12px; border-radius:10px; font-size:14px; font-weight:600; border:none; cursor:pointer; }
@@ -50,15 +51,15 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 .dim-card .name { font-size:12px; color:#888; margin-bottom:4px; }
 .dim-card .dscore { font-size:20px; font-weight:700; }
 .dim-card .dstatus { font-size:11px; margin-top:4px; padding:2px 10px; border-radius:10px; display:inline-block; }
-.low { background:#e6f7e6; color:#16a34a; }
+.low { background:#e6f7e6; color:#b45309; }
 .mid { background:#fef9e7; color:#d97706; }
 .high { background:#feeaea; color:#dc2626; }
-.pass { background:#e6f7e6; color:#16a34a; }
+.pass { background:#e6f7e6; color:#b45309; }
 .warn { background:#fef9e7; color:#d97706; }
 .danger { background:#feeaea; color:#dc2626; }
 .fail { background:#feeaea; color:#dc2626; }
 .caution { background:#fef9e7; color:#d97706; }
-.rate-green { background:#e6f7e6; color:#16a34a; }
+.rate-green { background:#e6f7e6; color:#b45309; }
 .rate-yellow { background:#fef9e7; color:#d97706; }
 .rate-red { background:#feeaea; color:#dc2626; }
 
@@ -72,7 +73,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 .detail-item:last-child { border-bottom:none; }
 .detail-item .dlabel { font-size:13px; color:#555; }
 .detail-item .dval { font-size:14px; font-weight:600; }
-.detail-item .dval.pass { color:#16a34a; }
+.detail-item .dval.pass { color:#b45309; }
 .detail-item .dval.warn { color:#d97706; }
 .detail-item .dval.danger { color:#dc2626; }
 .result-card { background:white; border-radius:12px; padding:16px; margin-bottom:8px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
@@ -83,23 +84,23 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 .result-row .val { font-weight:600; }
 .result-row.total { border-top:2px solid #b45309; padding-top:8px; margin-top:4px; font-weight:700; }
 .result-row.total .val { color:#b45309; font-size:16px; }
-.result-green { color:#16a34a; }
+.result-green { color:#b45309; }
 .result-red { color:#dc2626; }
 .result-orange { color:#d97706; }
 
-.member-banner { background:linear-gradient(135deg,#0f0c29,#302b63,#24243e); border-radius:12px; padding:20px; text-align:center; margin-top:16px; }
+.member-banner { background:linear-gradient(135deg,#92400e,#b45309,#92400e); border-radius:12px; padding:20px; text-align:center; margin-top:16px; }
 .member-banner h3 { font-size:15px; color:white; margin-bottom:6px; }
 .member-banner p { font-size:12px; color:rgba(255,255,255,0.85); line-height:1.6; }
 .member-banner .btn { display:inline-block; background:white; color:#b45309; padding:8px 24px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:600; margin-top:8px; }
 
-.contact { background:#eef2ff; border-radius:8px; padding:12px; }
+.contact { background:#fffbeb; border-radius:8px; padding:12px; }
 .contact strong { font-size:14px; color:#b45309; }
 .scenario-grid { display:flex; gap:8px; }
 .scenario-btn { flex:1; padding:10px; border-radius:8px; font-size:13px; font-weight:600; border:2px solid #ddd; background:white; color:#888; cursor:pointer; text-align:center; transition:all .2s; }
-.scenario-btn.active { border-color:#3b82f6; color:#b45309; background:#eef2ff; }
+.scenario-btn.active { border-color:#d97706; color:#b45309; background:#fffbeb; }
 .chart-area { background:white; border-radius:16px; padding:20px; box-shadow:0 2px 12px rgba(0,0,0,0.06); margin-bottom:16px; text-align:center; }
 .chart-area canvas { max-width:100%; height:auto; }
-.form-row input[type=range] { flex:1; min-width:120px; max-width:250px; accent-color:#3b82f6; }
+.form-row input[type=range] { flex:1; min-width:120px; max-width:250px; accent-color:#d97706; }
 .form-row .val { font-size:14px; font-weight:700; color:#b45309; min-width:30px; text-align:right; }
 .form-row .hint { font-size:11px; color:#999; }
 .dim-card .bar-bg { position:absolute; bottom:0; left:0; height:4px; background:#e8ecf1; width:100%; }
@@ -112,7 +113,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 @media print {
   body { background:white !important; padding:0 !important; margin:0 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   .fixed-bottom, .no-print, .marketing, [class*="返回"], footer, .footer, #返回, .return-bar, .bottom-bar { display:none !important; }
-  .header { background:linear-gradient(135deg,#0c1445,#1a3a6b) !important; color:white !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; padding:20px 16px !important; }
+  .header { background:linear-gradient(135deg,#92400e,#b45309) !important; color:white !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; padding:20px 16px !important; }
   .card, .dim-card, .check-item, .result-card { break-inside:avoid; page-break-inside:avoid; border:1px solid #ddd !important; box-shadow:none !important; }
   .score-card, .result-summary { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   .tabs { display:none !important; }
@@ -127,7 +128,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 </head>
 <body>
 <div class="header">
-  <h1>🔍 企业税务风险健康体检</h1>
+  <h1>🔍 企业税务风险健康体检 <span class="v3-badge">V3.0</span></h1>
   <p>3分钟快速扫描 · 8大维度 · 即时风险预警</p>
   <div class="badge">您身边的财税专家 · 洪淳宇</div>
 </div>
@@ -262,13 +263,14 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
     <h3>⚠️ 免责声明</h3>
     <p>本工具仅作为初步风险提示，不能替代专业税务顾问的全面评估。如发现风险信号，建议及时咨询专业财税顾问。</p>
   </div>
+  
 
   <div style="text-align:center; padding:16px; margin-top:4px;">
-    <a href="https://sparrow528.github.io/copper-toolbox/" style="display:inline-block; padding:10px 24px; background:#e8eaf6; color:#b45309; border-radius:8px; font-size:13px; font-weight:600; text-decoration:none; border:1px solid #c5cae9;">
+    <a href="https://sparrow528.github.io/copper-toolbox/" style="display:inline-block; padding:10px 24px; background:#fef3c7; color:#b45309; border-radius:8px; font-size:13px; font-weight:600; text-decoration:none; border:1px solid #fcd34d;">
       ← 返回铜级会员入口
     </a>
   </div>
-  <div class="member-banner" id="helpBanner">
+<div class="member-banner" id="helpBanner">
     <h3>🔶 铜级会员专属服务</h3>
     <p>加入铜级会员（¥2,980/年），享年度税务健康检查简表交付<br>更有专业财税顾问一对一答疑</p>
     <a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">了解会员方案 →</a>
@@ -320,7 +322,7 @@ function calc(){
 
   var score=riskCount;
   var grade,cls,color;
-  if(score<=1){grade='低风险';cls='low';color='#16a34a';}
+  if(score<=1){grade='低风险';cls='low';color='#b45309';}
   else if(score<=3){grade='中等风险';cls='mid';color='#d97706';}
   else{grade='高风险';cls='high';color='#dc2626';}
 
@@ -377,7 +379,14 @@ function calc(){
     html+='<div class="help-card"><h3>✅ 无风险项</h3><p>所有维度均正常，未发现明显税务风险。</p></div>';
   }
 
-  html+='<div class="member-banner"><h3>🔶 加入铜级会员，掌握更多工具</h3><p>铜级会员专享：年度税务健康检查简表 · 专业顾问一对一答疑<br>已有'+score+'个风险点？让专业顾问帮您逐一解决。</p><a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">了解会员方案 →</a></div>';
+  html+='
+
+  <div style="text-align:center; padding:16px; margin-top:4px;">
+    <a href="https://sparrow528.github.io/copper-toolbox/" style="display:inline-block; padding:10px 24px; background:#fef3c7; color:#b45309; border-radius:8px; font-size:13px; font-weight:600; text-decoration:none; border:1px solid #fcd34d;">
+      ← 返回铜级会员入口
+    </a>
+  </div>
+<div class="member-banner"><h3>🔶 加入铜级会员，掌握更多工具</h3><p>铜级会员专享：年度税务健康检查简表 · 专业顾问一对一答疑<br>已有'+score+'个风险点？让专业顾问帮您逐一解决。</p><a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">了解会员方案 →</a></div>';
 
   document.getElementById('reportContent').innerHTML=html;
   st('report');
@@ -411,5 +420,18 @@ function downloadPDF(){
   window.print();
 }
 </script>
+
+<div style="text-align:center; padding:10px 16px; font-size:11px; color:#999;">
+  版本 V2.0
+</div>
+
+<div class="bottom-bar" style="position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-top:1px solid rgba(0,0,0,.06);padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:16px;font-size:12px;color:#b45309;z-index:100">
+  <span style="font-weight:600;color:#92400e">宇守信咨询</span>
+  <span style="color:#d4a843">|</span>
+  <span>186-0129-4989</span>
+  <span style="color:#d4a843">|</span>
+  <span>铜级 V3.0</span>
+</div>
+
 </body>
 </html>
