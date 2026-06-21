@@ -6,11 +6,10 @@
 <title>企业税务风险健康体检（快速版）— 宇守信咨询</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; background:linear-gradient(180deg,#fffbeb 0%,#fef3c7 60%,#fef9e7 100%); color:#2d3436; padding-bottom:100px; }
+body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; background:linear-gradient(180deg,#fffbeb 0%,#fef3c7 60%,#fef9e7 100%); color:#2d3436; padding-bottom:60px; }
 .header { background:linear-gradient(135deg,#92400e,#d97706); color:white; padding:32px 20px 24px; text-align:center; }
 .header h1 { font-size:22px; font-weight:700; margin-bottom:6px; }
 .header p { font-size:13px; opacity:0.85; }
-.header .v3-badge { display:inline-block; background:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.4); border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; margin-left:6px; vertical-align:middle; letter-spacing:1px; }
 .header .badge { display:inline-block; background:rgba(255,255,255,0.2); border-radius:20px; padding:4px 14px; font-size:11px; margin-top:8px; }
 .tabs { display:flex; background:white; box-shadow:0 1px 4px rgba(0,0,0,0.08); position:sticky; top:0; z-index:10; }
 .tab { flex:1; text-align:center; padding:14px 0; font-size:14px; font-weight:500; color:#888; cursor:pointer; border-bottom:3px solid transparent; transition:all .2s; }
@@ -27,12 +26,12 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 .yesno { display:flex; gap:8px; }
 .yesno span { padding:4px 16px; border-radius:16px; font-size:13px; cursor:pointer; border:1px solid #ddd; color:#666; }
 .yesno span.sel-yes { background:linear-gradient(135deg,#92400e,#d97706); color:white; border-color:#d97706; }
-.yesno span.sel-no { background:#e8ecf1; color:#999; border-color:#ddd; }
+.yesno span.sel-no { background:#fef3c7; color:#999; border-color:#ddd; }
 .fixed-bottom { position:sticky; bottom:0; background:white; padding:12px 16px; display:flex; gap:10px; box-shadow:0 -2px 8px rgba(0,0,0,0.06); z-index:10; }
 .fixed-bottom button { flex:1; padding:12px; border-radius:10px; font-size:14px; font-weight:600; border:none; cursor:pointer; }
 .btn-primary { background:linear-gradient(135deg,#92400e,#d97706); color:white; }
 .btn-primary:hover { opacity:0.9; }
-.btn-secondary { background:#e8ecf1; color:#555; }
+.btn-secondary { background:#fef3c7; color:#555; }
 
 .score-card { background:linear-gradient(135deg,#92400e,#d97706); color:white; border-radius:16px; padding:28px 20px; text-align:center; margin-bottom:16px; }
 .score-card .label { font-size:13px; opacity:0.85; }
@@ -88,7 +87,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 .result-red { color:#dc2626; }
 .result-orange { color:#d97706; }
 
-.member-banner { background:linear-gradient(135deg,#92400e,#b45309,#92400e); border-radius:12px; padding:20px; text-align:center; margin-top:16px; }
+.member-banner { background:linear-gradient(135deg,#78350f,#b45309,#78350f); border-radius:12px; padding:20px; text-align:center; margin-top:16px; }
 .member-banner h3 { font-size:15px; color:white; margin-bottom:6px; }
 .member-banner p { font-size:12px; color:rgba(255,255,255,0.85); line-height:1.6; }
 .member-banner .btn { display:inline-block; background:white; color:#b45309; padding:8px 24px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:600; margin-top:8px; }
@@ -103,7 +102,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 .form-row input[type=range] { flex:1; min-width:120px; max-width:250px; accent-color:#d97706; }
 .form-row .val { font-size:14px; font-weight:700; color:#b45309; min-width:30px; text-align:right; }
 .form-row .hint { font-size:11px; color:#999; }
-.dim-card .bar-bg { position:absolute; bottom:0; left:0; height:4px; background:#e8ecf1; width:100%; }
+.dim-card .bar-bg { position:absolute; bottom:0; left:0; height:4px; background:#fef3c7; width:100%; }
 .dim-card .bar-fill { position:absolute; bottom:0; left:0; height:4px; transition:width .5s; }
 
 @media (max-width:480px){.dim-grid{grid-template-columns:1fr 1fr}.result-summary .row{flex-direction:column;gap:4px}}
@@ -113,7 +112,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 @media print {
   body { background:white !important; padding:0 !important; margin:0 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   .fixed-bottom, .no-print, .marketing, [class*="返回"], footer, .footer, #返回, .return-bar, .bottom-bar { display:none !important; }
-  .header { background:linear-gradient(135deg,#92400e,#b45309) !important; color:white !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; padding:20px 16px !important; }
+  .header { background:linear-gradient(135deg,#78350f,#b45309) !important; color:white !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; padding:20px 16px !important; }
   .card, .dim-card, .check-item, .result-card { break-inside:avoid; page-break-inside:avoid; border:1px solid #ddd !important; box-shadow:none !important; }
   .score-card, .result-summary { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   .tabs { display:none !important; }
@@ -128,7 +127,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
 </head>
 <body>
 <div class="header">
-  <h1>🔍 企业税务风险健康体检 <span class="v3-badge">V3.0</span></h1>
+  <h1>🔍 企业税务风险健康体检 <span style="display:inline-block;background:rgba(255,255,255,0.25);border:1px solid rgba(255,255,255,0.4);border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;margin-left:6px;vertical-align:middle;letter-spacing:1px">V3.0</span></h1>
   <p>3分钟快速扫描 · 8大维度 · 即时风险预警</p>
   <div class="badge">您身边的财税专家 · 洪淳宇</div>
 </div>
@@ -263,10 +262,13 @@ body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaH
     <h3>⚠️ 免责声明</h3>
     <p>本工具仅作为初步风险提示，不能替代专业税务顾问的全面评估。如发现风险信号，建议及时咨询专业财税顾问。</p>
   </div>
-  
 
-  
-<div class="member-banner" id="helpBanner">
+  <div style="text-align:center; padding:16px; margin-top:4px;">
+    <a href="https://sparrow528.github.io/copper-toolbox/" style="display:inline-block; padding:10px 24px; background:#e8eaf6; color:#b45309; border-radius:8px; font-size:13px; font-weight:600; text-decoration:none; border:1px solid #fcd34d;">
+      ← 返回铜级会员入口
+    </a>
+  </div>
+  <div class="member-banner" id="helpBanner">
     <h3>🔶 铜级会员专属服务</h3>
     <p>加入铜级会员（¥2,980/年），享年度税务健康检查简表交付<br>更有专业财税顾问一对一答疑</p>
     <a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">了解会员方案 →</a>
@@ -375,10 +377,7 @@ function calc(){
     html+='<div class="help-card"><h3>✅ 无风险项</h3><p>所有维度均正常，未发现明显税务风险。</p></div>';
   }
 
-  html+='
-
-  
-<div class="member-banner"><h3>🔶 加入铜级会员，掌握更多工具</h3><p>铜级会员专享：年度税务健康检查简表 · 专业顾问一对一答疑<br>已有'+score+'个风险点？让专业顾问帮您逐一解决。</p><a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">了解会员方案 →</a></div>';
+  html+='<div class="member-banner"><h3>🔶 加入铜级会员，掌握更多工具</h3><p>铜级会员专享：年度税务健康检查简表 · 专业顾问一对一答疑<br>已有'+score+'个风险点？让专业顾问帮您逐一解决。</p><a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">了解会员方案 →</a></div>';
 
   document.getElementById('reportContent').innerHTML=html;
   st('report');
@@ -413,24 +412,18 @@ function downloadPDF(){
 }
 </script>
 
-<div style="text-align:center; padding:10px 16px; font-size:11px; color:#999;">
-  版本 V2.0
-</div>
+  <div style="text-align:center;padding:16px">
+    <a href="https://sparrow528.github.io/copper-toolbox/" style="display:inline-block;padding:10px 24px;background:#fef3c7;color:#b45309;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid #fcd34d">← 返回铜级会员入口</a>
+  </div>
 
-<div class="bottom-bar" style="position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-top:1px solid rgba(0,0,0,.06);padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:16px;font-size:12px;color:#b45309;z-index:100">
+
+<div style="position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-top:1px solid rgba(0,0,0,.06);padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:16px;font-size:12px;color:#b45309;z-index:100">
   <span style="font-weight:600;color:#92400e">宇守信咨询</span>
   <span style="color:#d4a843">|</span>
   <span>186-0129-4989</span>
   <span style="color:#d4a843">|</span>
   <span>铜级 V3.0</span>
 </div>
-
-
-  <div style="text-align:center; padding:16px; margin-top:4px;">
-    <a href="https://sparrow528.github.io/copper-toolbox/" style="display:inline-block; padding:10px 24px; background:#fef3c7; color:#b45309; border-radius:8px; font-size:13px; font-weight:600; text-decoration:none; border:1px solid #fcd34d;">
-      ← 返回铜级会员入口
-    </a>
-  </div>
 
 </body>
 </html>
